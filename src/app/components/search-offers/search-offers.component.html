@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>Ricerca Offerte di Lavoro</h2>
+  
+    <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="searchText">Testo di Ricerca</label>
+        <input type="text" id="searchText" formControlName="searchText" class="form-control">
+        <div *ngIf="searchText?.invalid && searchText?.touched" class="text-danger">
+          Testo di Ricerca è obbligatorio.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="maxResults">Numero massimo di risultati</label>
+        <input type="number" id="maxResults" formControlName="maxResults" class="form-control">
+        <div *ngIf="maxResults?.invalid && maxResults?.touched" class="text-danger">
+          Numero massimo di risultati è obbligatorio e deve essere un numero positivo.
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="searchForm.invalid">Cerca Offerte</button>
+    </form>
+  
+    <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+  
+    <ul *ngIf="jobOffers.length > 0" class="list-group mt-4">
+      <li *ngFor="let offer of jobOffers" class="list-group-item">
+        <h5>{{ offer.title }}</h5>
+        <p>{{ offer.shortDescription }}</p>
+        <small>Inserito il: {{ offer.datePosted | date:'short' }} - Retribuzione Lorda: €{{ offer.grossSalary }}</small>
+      </li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,29 @@
+.container {
+    max-width: 900px;
+  }
+  
+  .list-group-item {
+    border-radius: 10px;
+  }
+  
+  .list-group-item h5 {
+    color: #007bff;
+    font-size: 1.5rem; /* Aumenta la dimensione del font del titolo */
+  }
+  
+  .list-group-item small {
+    display: block;
+  }
+  
+  .list-group-item p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .list-group-item-action:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .alert {
+    font-size: 1rem;
+  }
+  

@@ -1,0 +1,61 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Job Offers App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/new-offer">Nuova Offerta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/edit-offer">Modifica Offerta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/delete-offer">Elimina Offerta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/search-offers">Ricerca Offerte</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container mt-4">
+    <router-outlet></router-outlet>
+  </div>
+   -->
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">OfferteLavoro</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/new-offer" routerLinkActive="active">Nuova Offerta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/edit-offer" routerLinkActive="active">Modifica Offerta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/delete-offer" routerLinkActive="active">Elimina Offerta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/search-offers" routerLinkActive="active">Ricerca Offerte</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-4">
+    <router-outlet></router-outlet>
+  </div>
+  

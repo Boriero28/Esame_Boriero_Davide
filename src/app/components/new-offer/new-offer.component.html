@@ -1,0 +1,43 @@
+<div class="container">
+    <h2>Nuova Offerta di Lavoro</h2>
+  
+    <form [formGroup]="jobOfferForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="title">Titolo</label>
+        <input type="text" id="title" formControlName="title" class="form-control">
+        <div *ngIf="title?.invalid && title?.touched" class="text-danger">
+          Titolo è obbligatorio.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="shortDescription">Descrizione Breve</label>
+        <textarea id="shortDescription" formControlName="shortDescription" class="form-control"></textarea>
+        <div *ngIf="shortDescription?.invalid && shortDescription?.touched" class="text-danger">
+          Descrizione Breve è obbligatoria.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="datePosted">Data di Inserimento</label>
+        <input type="date" id="datePosted" formControlName="datePosted" class="form-control">
+        <div *ngIf="datePosted?.invalid && datePosted?.touched" class="text-danger">
+          Data di Inserimento è obbligatoria.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="grossSalary">Retribuzione Lorda</label>
+        <input type="number" id="grossSalary" formControlName="grossSalary" class="form-control">
+        <div *ngIf="grossSalary?.invalid && grossSalary?.touched" class="text-danger">
+          Retribuzione Lorda è obbligatoria e deve essere un numero positivo.
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="jobOfferForm.invalid">Aggiungi Offerta</button>
+    </form>
+  
+    <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+  </div>
+  

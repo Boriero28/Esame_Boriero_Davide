@@ -1,0 +1,47 @@
+/* body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    margin-bottom: 20px;
+  }
+   */
+   body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .navbar {
+    margin-bottom: 20px;
+  }
+  
+  .navbar-light .navbar-brand {
+    color: #fff;
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+    color: #fff;
+  }
+  
+  .nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .container {
+    max-width: 800px;
+  }
+  
+  .alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+  }
+  
+  .alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+  }
+  
+  

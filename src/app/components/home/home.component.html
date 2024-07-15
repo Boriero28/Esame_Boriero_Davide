@@ -1,0 +1,24 @@
+<div class="container">
+  <h1 class="my-4">Offerte di lavoro</h1>
+  
+  <form (ngSubmit)="onSubmit()" class="mb-4">
+    <div class="input-group">
+      <input type="number" id="maxResults" [(ngModel)]="maxResults" name="maxResults" class="form-control" placeholder="Numero massimo di offerte di lavoro da visualizzare" required>
+      <button type="submit" class="btn btn-primary">Aggiorna</button>
+    </div>
+  </form>
+  
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  <div *ngIf="!errorMessage && jobOffers.length === 0" class="alert alert-info">Nessuna offerta di lavoro disponibile</div>
+  
+  <div *ngIf="jobOffers.length > 0" class="list-group">
+    <div *ngFor="let offer of jobOffers" class="list-group-item list-group-item-action flex-column align-items-start mb-2 shadow-sm">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{ offer.title }}</h5>
+        <small>ID: {{ offer._id }}</small>
+      </div>
+      <p class="mb-1">{{ offer.shortDescription }}</p>
+      <small>Inserito il: {{ offer.datePosted | date:'short' }} - Retribuzione Lorda: €{{ offer.grossSalary }}</small>
+    </div>
+  </div>
+</div>
